@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLogin">
 
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.androidtest.ui.login.FragmentLogin"
+        tools:layout="@layout/layout_fragment_login"
+        android:label="FragmentLogin" />
+    <fragment
+        android:id="@+id/fragmentDashboard"
+        tools:layout="@layout/layout_fragment_dashboard"
+        android:name="com.example.androidtest.ui.dashboard.FragmentDashboard"
+        android:label="FragmentDashboard" />
+    <fragment
+        android:id="@+id/fragmentDetails"
+        tools:layout="@layout/layout_fragment_details"
+        android:name="com.example.androidtest.ui.details.FragmentDetails"
+        android:label="FragmentDetails" />
 </navigation>

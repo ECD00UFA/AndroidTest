@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_splash" type="id" />
+    <item name="action_login" type="id" />
+    <item name="action_dashboard" type="id" />
+    <item name="action_details" type="id" />
+
+</resources>

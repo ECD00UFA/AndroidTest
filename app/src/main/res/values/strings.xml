@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AndroidTest</string>
+    <string name="todo">todo</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="forget">Forgot</string>
+    <string name="password_with_question_mark">password?</string>
+    <string name="forget_password_instruction">Please type your registered email. We\'ll send you verification code on your registered email.</string>
+    <string name="type_your_email">Type your email</string>
+    <string name="show_password">show_password</string>
+    <string name="hide_password">hide_password</string>
 </resources>

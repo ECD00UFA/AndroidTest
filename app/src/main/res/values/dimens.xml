@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Login guidelines -->
+
+    <item name="login_content_guide" format="float" type="dimen">0.45</item>
+    <item name="login_left_guide" format="float" type="dimen">0.07</item>
+    <item name="login_right_guide" format="float" type="dimen">0.93</item>
+
+
+</resources>
