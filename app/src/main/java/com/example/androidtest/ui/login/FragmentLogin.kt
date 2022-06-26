@@ -89,4 +89,8 @@ class FragmentLogin : Fragment() {
             }
         }
     }
+
+    fun validate(userName: String, password: String): String {
+        return if (userName == "user" && password == "user") "Login was successful" else "Invalid login!"
+    }
 }
