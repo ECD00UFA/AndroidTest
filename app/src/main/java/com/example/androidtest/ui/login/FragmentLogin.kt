@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.example.androidtest.R
 import com.example.androidtest.app.Navigator
 import com.example.androidtest.databinding.LayoutFragmentLoginBinding
@@ -30,9 +31,15 @@ class FragmentLogin : Fragment() {
     }
 
     private fun init() {
-        if (viewModel.isUserLoggedIn() == 1) {
-            Navigator.navigate(R.id.fragmentDashboard, R.id.action_dashboard, Bundle())
-        }
+        viewModel.isUserLoggedIn()
+        viewModel.isUserLoggedIn.observe(this, object : Observer<Int> {
+            override fun onChanged(t: Int?) {
+                if (t == 1) {
+                    viewModel.isUserLoggedIn.removeObserver(this)
+                    Navigator.navigate(R.id.fragmentDashboard, R.id.action_dashboard, Bundle())
+                }
+            }
+        })
     }
 
     private fun setEvents() {
@@ -68,7 +75,8 @@ class FragmentLogin : Fragment() {
             if (it.tag == getString(R.string.show_password)) {
                 binding.imgPassIcon.tag = getString(R.string.hide_password)
                 binding.imgPassIcon.setImageResource(R.drawable.icon_pass_hidden)
-                binding.etPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                binding.etPassword.transformationMethod =
+                    HideReturnsTransformationMethod.getInstance()
             } else {
                 binding.imgPassIcon.tag = getString(R.string.show_password)
                 binding.imgPassIcon.setImageResource(R.drawable.icon_pass_show)

@@ -22,4 +22,10 @@ interface UserDao {
 
     @Query("Select is_logged_in from User where is_logged_in = 1")
     fun isUserLoggedIn(): Int
+
+    @Query("select * from user where is_logged_in = 1 ")
+    fun getLoggedInUser(): User
+
+    @Query("delete from user")
+    fun nukeTable()
 }
